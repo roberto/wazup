@@ -4,5 +4,7 @@ class Project
 
   field :title, type: String
 
+  embeds_many :hosts
+
   validates :title, presence: true
 end
