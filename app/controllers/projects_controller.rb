@@ -1,0 +1,12 @@
+class ProjectsController < ApplicationController
+  def create
+    @project = Project.new(params[:project])
+    @project.save!
+
+    respond_to do |format|
+      format.html do
+        redirect_to root_url, notice: "Success!"
+      end
+    end
+  end
+end
