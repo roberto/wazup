@@ -9,4 +9,12 @@ class ProjectsController < ApplicationController
       end
     end
   end
+
+  def show
+    @project = Project.find(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
+  end
 end

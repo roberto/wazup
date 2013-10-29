@@ -7,11 +7,14 @@
           <span class="glyphicon glyphicon-plus"></span> Add
         <% end %>
       </h2>
-      <div class="list-group">
+      <div class="list-group projects-list">
         <% @projects.each do |project| %>
-          <%= link_to project.title, "#", class: 'list-group-item' %>
+          <%= link_to project.title, project, class: 'list-group-item', remote: true %>
         <% end %>
       </div>
+    </div>
+
+    <div class="col-sm-9 project-area">
     </div>
   </div>
 </div>

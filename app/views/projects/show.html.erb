@@ -1,0 +1,12 @@
+<h3><%= @project.title %></h3>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#last-check" data-toggle="tab">Last Check</a></li>
+  <li><a href="#check-history" data-toggle="tab">Check History</a></li>
+  <li class="dropdown">
+    <a href="#" id="project-admin" class="dropdown-toggle" data-toggle="dropdown">Admin <b class="caret"></b></a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="project-admin">
+      <li><a href="#hosts" data-toggle="tab">Hosts</a></li>
+      <li><a href="#recipes" data-toggle="tab">Recipes</a></li>
+    </ul>
+  </li>
+</ul>
