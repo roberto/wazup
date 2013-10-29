@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      <h2>
+        Projects 
+        <%= link_to("#project-new-form", class: "btn btn-primary btn-xs", data: {toggle: "modal"}) do %>
+          <span class="glyphicon glyphicon-plus"></span> Add
+        <% end %>
+      </h2>
+      <div class="list-group">
+        <% @projects.each do |project| %>
+          <%= link_to project.title, "#", class: 'list-group-item' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
