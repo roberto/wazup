@@ -4,7 +4,7 @@ describe DashboardController do
 
   describe "GET 'index'" do
     let(:projects) do
-      mock(:projects)
+      double(:projects)
     end
 
     before do
