@@ -9,20 +9,18 @@ describe DashboardController do
 
     before do
       Project.stub(:all).and_return(projects)
+      get 'index'
     end
 
     it "returns http success" do
-      get 'index'
       expect(response).to be_success
     end
 
     it "renders index.html" do
-      get 'index'
       expect(response).to render_template("index")
     end
 
     it "assigns projects" do
-      get 'index'
       expect(assigns(:projects)).to eql(projects)
     end
   end
