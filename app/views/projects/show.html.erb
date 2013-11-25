@@ -27,9 +27,6 @@
     <%= render 'hosts', hosts: @project.hosts %>
   </div>
   <div class="tab-pane" id="scripts">
-    <ul class="list-group">
-      <li class="list-group-item">Script 1</li>
-      <li class="list-group-item">Script 2</li>
-    </ul>
+    <%= render 'scripts', scripts: @project.scripts %>
   </div>
 </div>
