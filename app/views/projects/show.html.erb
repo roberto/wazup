@@ -1,6 +1,6 @@
 <h3><%= @project.title %></h3>
 <ul class="nav nav-tabs" style="margin-bottom: 10px">
-  <li><a href="#hosts" data-toggle="tab">Hosts</a></li>
+  <li class="active"><a href="#hosts" data-toggle="tab">Hosts</a></li>
   <li><a href="#check-history" data-toggle="tab">Check History</a></li>
   <li><a href="#scripts" data-toggle="tab">Scripts</a></li>
 </ul>
@@ -23,7 +23,7 @@
       </tbody>
     </table>
   </div>
-  <div class="tab-pane" id="hosts">
+  <div class="tab-pane active" id="hosts">
     <%= render 'hosts', hosts: @project.hosts %>
   </div>
   <div class="tab-pane" id="scripts">
