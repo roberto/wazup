@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Project.where(title: "Example Project").delete
+
+project = Project.new(title: "Example Project")
+
+project.hosts << Host.new(address: "http://google.com/", name: "Google 1")
+project.hosts << Host.new(address: "https://www.google.com/", name: "Google 2", auto: true)
+project.hosts << Host.new(address: "https://google.com", auto: true)
+
+project.save!
