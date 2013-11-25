@@ -14,5 +14,10 @@ project = Project.new(title: "Example Project")
 project.hosts << Host.new(address: "http://google.com/", name: "Google 1")
 project.hosts << Host.new(address: "https://www.google.com/", name: "Google 2", auto: true)
 project.hosts << Host.new(address: "https://google.com", auto: true)
+project.hosts << Host.new(address: "http://bing.com", name: "Bing")
 
 project.save!
+
+project.scripts << Script.new(title: "Google test", steps: "  When I fill in \"q\" with \"shashi\"\n  Then I should see \"Google\"")
+project.scripts << Script.new(title: "Input test", steps: "  When I fill in \"q\" with \"shashi\"")
+
