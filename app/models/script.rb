@@ -3,5 +3,7 @@ class Script
   field :title, type: String
   field :steps, type: String
 
+  belongs_to :project
+
   validates :title, :steps, presence: true
 end
