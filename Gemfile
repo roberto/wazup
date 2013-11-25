@@ -6,9 +6,13 @@ gem 'jquery-rails'
 gem 'cucumber'
 gem 'capybara'
 gem 'poltergeist'
+
 gem 'mongoid'
+
 gem 'rspec'
 gem 'rspec-rails'
+
+gem 'foreman'
 
 gem 'bootstrap-sass-rails'
 
