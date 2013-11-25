@@ -24,16 +24,7 @@
     </table>
   </div>
   <div class="tab-pane" id="hosts">
-    <ul class="list-group">
-      <% @project.hosts.each do |host| %>
-      <li class="list-group-item">
-          <%= host.name %> - <%= host.address %>
-          <% if host.auto %>
-            <span class="label label-info">auto</span>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'hosts', hosts: @project.hosts %>
   </div>
   <div class="tab-pane" id="scripts">
     <ul class="list-group">

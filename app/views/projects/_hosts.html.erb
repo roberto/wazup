@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <% hosts.each do |host| %>
+  <li class="list-group-item">
+      <%= host.name %> - <%= host.address %>
+      <% if host.auto %>
+        <span class="label label-info">auto</span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
