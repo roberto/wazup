@@ -1,0 +1,18 @@
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Host</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% checks.each do |check| %>
+    <tr class="<%= check.state == "failed" ? "danger" : "" %>">
+      <td><%= l check.created_at, format: :short %></td>
+      <td><%= check.host.name %> - <%= check.host.address %></td>
+      <td><%= check.state %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
