@@ -3,7 +3,7 @@
   <li class="list-group-item">
     <%= host.name %> - <%= host.address %>
     <% if host.auto %>
-      <span class="label label-info">auto</span>
+      <span class="label label-success">auto</span>
     <% end %>
     <%= link_to checks_url(host_id: host.id, project_id: host.project.id), remote: true, method: :post, class: 'btn btn-primary btn-xs' do %>
       <span class="glyphicon glyphicon-play"></span> Check it
