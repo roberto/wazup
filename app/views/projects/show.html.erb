@@ -18,7 +18,7 @@
       <tbody>
         <% @project.checks.each do |check| %>
         <tr class="<%= check.state == "failed" ? "danger" : "" %>">
-          <td></td>
+          <td><%= l check.created_at, format: :short %></td>
           <td><%= check.host.name %> - <%= check.host.address %></td>
           <td><%= check.state %></td>
         </tr>
