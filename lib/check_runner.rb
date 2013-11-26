@@ -14,9 +14,9 @@ class CheckRunner
   end
 
   def execute
-    write_tempfile  do |file|
+    write_tempfile do |file|
       result = `bundle exec cucumber --format json --require features #{file.path}`
-      host.checks << Check.new(result: result)
+      host.checks.create(result: result)
     end
   end
 
@@ -25,6 +25,7 @@ class CheckRunner
   def write_tempfile
     file = Tempfile.new(Time.now.to_i.to_s)
     file.write "Feature: #{Time.now.to_i.to_s}\n"
+
     host.scripts.each do |script|
       file.write "Scenario: #{script.title}\n"
       file.write "  Given I am on \"#{host.address}\"\n"
