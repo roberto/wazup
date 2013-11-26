@@ -7,7 +7,6 @@
 
 <div class="tab-content">
   <div class="tab-pane" id="check-history">
-    Check History Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
     <table class="table table-condensed">
       <thead>
         <tr>
@@ -17,9 +16,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <% @project.checks.each do |check| %>
+        <tr class="<%= check.state == "failed" ? "danger" : "" %>">
           <td></td>
+          <td><%= check.host.address %></td>
+          <td><%= check.state %></td>
         </tr>
+        <% end %>
       </tbody>
     </table>
   </div>

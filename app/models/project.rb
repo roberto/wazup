@@ -7,5 +7,11 @@ class Project
   embeds_many :hosts
   has_many :scripts
 
+  def checks
+    hosts.collect do |host|
+      host.checks
+    end.flatten
+  end
+
   validates :title, presence: true
 end
